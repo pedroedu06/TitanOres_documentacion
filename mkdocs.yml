@@ -1,0 +1,84 @@
+site_name: TitanOres
+site_description: Endgame ore progression for the Titan Modpack (Minecraft 1.16.5 / Forge)
+site_author: Pedro
+repo_url: https://github.com/pedroedu06/TitanOres
+repo_name: pedroedu06/TitanOres
+copyright: TitanOres &copy; Pedro &mdash; All Rights Reserved
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/pickaxe
+  favicon: assets/icons/solarite_ingot.png
+  palette:
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - content.code.copy
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: docs/snippets
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# All content pages live at the root of docs/ (recipe snippets use relative icon paths);
+# the hierarchy below is only the menu.
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Progression: progression.md
+      - Commands & Keybinds: commands.md
+  - Ores:
+      - Solarite: solarite.md
+      - Emberite: emberite.md
+      - Titanium: titanium.md
+      - Emberium (alloy): emberium.md
+  - Equipment:
+      - Tools: tools.md
+      - Armor: armor.md
+  - Special Items: items.md
+  - Machines:
+      - Titan Factory: titan-factory.md
+  - Modpack Integration: modpack.md
+  - Developers:
+      - Development Setup: dev-setup.md
+      - Architecture: dev-architecture.md
+  - Changelog: changelog.md
