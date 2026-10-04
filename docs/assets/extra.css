@@ -71,14 +71,31 @@ img.mc-icon {
   image-rendering: crisp-edges;
 }
 
+/* Vanilla/other-mod items have no icon (their textures are not redistributed): readable text instead */
+.mc-slot.mc-text {
+  background: #a0a0a0;
+}
+
 .mc-label {
-  font-size: 7px;
-  line-height: 1.05;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 7.5px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 0 #000;
-  padding: 1px;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  color: #1e1e1e;
+  padding: 0 1px;
   overflow: hidden;
+}
+
+.mc-label small {
+  font-size: 6.5px;
+  font-weight: 600;
+  color: #4a4a4a;
 }
 
 .mc-count {

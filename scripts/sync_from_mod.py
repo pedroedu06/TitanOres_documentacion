@@ -190,6 +190,11 @@ def item_name(item_id):
     return path.replace("_", " ").title()
 
 
+# Short, readable effect names for potion ingredients (full name in the tooltip).
+POTION_NAMES = {
+    "swiftness": "Speed",
+}
+
 TAG_NAMES = {
     "forge:gears/iron": "Iron Gear",
     "forge:glass/colorless": "Glass",
@@ -200,8 +205,9 @@ TAG_NAMES = {
 def tag_slot(tag):
     """Tag ingredients (any mod): readable label plus '(any)', the tag id in the tooltip."""
     name = TAG_NAMES.get(tag) or tag.split(":", 1)[1].split("/")[-1].replace("_", " ").title()
-    label = html.escape(f"{name} (any)")
-    return f'<span class="mc-slot" title="{html.escape("#" + tag)}"><span class="mc-label">{label}</span></span>'
+    title = html.escape(f"{name} (any mod) - #{tag}")
+    return (f'<span class="mc-slot mc-text" title="{title}"><span class="mc-label">{html.escape(name)}'
+            f'<small>any</small></span></span>')
 
 
 def slot(ingredient, count=1):
@@ -213,7 +219,8 @@ def slot(ingredient, count=1):
     name = item_name(item_id)
     potion = re.search(r'Potion:"?(?:minecraft:)?([a-z_]+)', ingredient.get("nbt", "")) if isinstance(ingredient, dict) else None
     if potion:
-        name = f"{name} of {potion.group(1).replace('_', ' ').title()}"
+        effect = POTION_NAMES.get(potion.group(1), potion.group(1).replace("_", " ").title())
+        name = f"{effect} Potion"
     name = html.escape(name)
     ns, path = item_id.split(":", 1)
     badge = f'<span class="mc-count">{count}</span>' if count > 1 else ""
@@ -222,6 +229,7 @@ def slot(ingredient, count=1):
     else:
         # Vanilla/other mods: no textures are copied, show a short label instead.
         inner = f'<span class="mc-label">{name}</span>'
+        return f'<span class="mc-slot mc-text" title="{name}">{inner}{badge}</span>'
     return f'<span class="mc-slot" title="{name}">{inner}{badge}</span>'
 
 
