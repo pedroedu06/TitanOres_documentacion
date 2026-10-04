@@ -6,11 +6,16 @@
 ![Block of Emberium](assets/icons/emberium_block.png)
 </div>
 
-An alloy of **Emberite** and **Titanium**. It has no ore.
+An alloy of **Emberite** and **Titanium**, made in the Titan Factory. It has no ore.
 
-!!! note "Work in progress"
-    There is no way to produce Emberium yet. It will most likely be made in the
-    [Titan Factory](titan-factory.md).
+## How to make
+
+Emberium is produced in the [Titan Factory](titan-factory.md): 3 Emberite Ingots in one column and 3 Titanium Ingots
+in the other, using **40,000,000 FE** over 60 seconds, for **3 Emberium Ingots**.
+
+<div class="recipes">
+--8<-- "recipes/emberium_ingot_from_titan_factory.html"
+</div>
 
 ## Storage
 

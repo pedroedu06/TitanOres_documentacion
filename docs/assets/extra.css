@@ -39,6 +39,11 @@
   grid-auto-rows: 36px;
 }
 
+.mc-gap {
+  width: 36px;
+  height: 36px;
+}
+
 .mc-line {
   display: flex;
   align-items: center;

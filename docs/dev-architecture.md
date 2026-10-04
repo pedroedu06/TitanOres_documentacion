@@ -12,7 +12,8 @@ Root package: `com.titanmodpack.titanores` · mod id `titanores`.
 | `event` | Forge event handlers: armor abilities, automation blocker, mob spawns and dragon drop, health, tools, magnet |
 | `world` | Ore generation (`ModOreGeneration`) |
 | `loot` | Global loot modifiers (`auto_smelt`, `replace_with_item`) |
-| `recipe` | `titanores:upgrade_shaped`, a shaped recipe that keeps the NBT of the upgraded armor piece |
+| `recipe` | `titanores:upgrade_shaped` (keeps the NBT of the upgraded armor piece) and `titanores:titan_factory` (machine recipes) |
+| `energy` | `ModEnergyStorage`, the Forge Energy buffer used by machines |
 | `network` | `SimpleChannel` and the Night Vision toggle packet |
 | `client` | Client-only code: screens, keybinds and HUD (armor bar, compact health bar) |
 | `container` | Titan Factory container |
@@ -29,7 +30,10 @@ Root package: `com.titanmodpack.titanores` · mod id `titanores`.
   durability and override `isEnchantable`.
 - **Titanium tools:** `AreaToolHelper` handles the Area Mode NBT flag, the toggle and the 3×3 breaking through
   `ServerPlayerEntity.gameMode.destroyBlock` (respects protections and normal drops), with a recursion guard.
-- **Titan Factory:** `TitanFactoryTileEntity` holds a 7-slot `ItemStackHandler` exposed as an item capability.
+- **Titan Factory:** `TitanFactoryTileEntity` (tickable) holds a 7-slot `ItemStackHandler` and a `ModEnergyStorage`
+  (100M FE, receive-only). Item capability per side: top = `TitanFactoryItemHandlers.TopInput` (column-aware insert),
+  bottom = `BottomOutput`, sides = none; energy on every side. Recipes: `recipe/TitanFactoryRecipe`, type
+  `titanores:titan_factory`. GUI data is synced through an `IIntArray` (energy split into two 16-bit halves).
 
 ## Conventions
 

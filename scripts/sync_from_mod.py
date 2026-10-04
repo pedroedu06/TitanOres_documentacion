@@ -10,6 +10,7 @@ Default mod path: ../TitanOres
 import html
 import io
 import json
+import re
 import struct
 import sys
 import zlib
@@ -98,6 +99,59 @@ def texture_for_item(item_id):
     return None
 
 
+def block_faces(item_id):
+    """Top/left/right textures for cube block items, or None for non-cube models."""
+    model = json.loads((ASSETS / "models" / "item" / f"{item_id}.json").read_text(encoding="utf-8"))
+    parent = model.get("parent", "")
+    if not parent.startswith("titanores:block/"):
+        return None
+    block = json.loads((ASSETS / "models" / "block" / (parent.split("/", 1)[1] + ".json")).read_text(encoding="utf-8"))
+    t = block.get("textures", {})
+    if block.get("parent") == "minecraft:block/cube_all" and "all" in t:
+        return t["all"], t["all"], t["all"]
+    if block.get("parent") == "minecraft:block/cube" and "up" in t:
+        return t["up"], t.get("north", t["up"]), t.get("east", t["up"])
+    return None
+
+
+def load_frame(texture):
+    """First frame of a texture as rows of RGBA pixels, or None if it cannot be read."""
+    png = read_png(ASSETS / "textures" / (texture.split(":", 1)[1] + ".png"))
+    if not png:
+        return None
+    width, _, rows = png
+    return width, [[tuple(r[i:i + 4]) for i in range(0, width * 4, 4)] for r in rows[:width]]
+
+
+def render_iso(top, left, right, size=64):
+    """Isometric cube like the inventory view: lit top, darker left and right faces."""
+    half, quarter = size // 2, size // 4
+    out = [[(0, 0, 0, 0)] * size for _ in range(size)]
+
+    def sample(face, u, v, shade):
+        w, px = face
+        if not (0 <= u < 1 and 0 <= v < 1):
+            return None
+        r, g, b, a = px[int(v * w)][int(u * w)]
+        return (int(r * shade), int(g * shade), int(b * shade), a)
+
+    for y in range(size):
+        for x in range(size):
+            fx, fy = x + 0.5, y + 0.5
+            # top: origin (0, q), u -> (half, -q), v -> (half, +q)
+            a, b = fx / half, (fy - quarter) / quarter
+            c = sample(top, (a - b) / 2, (a + b) / 2, 1.0)
+            if c is None and fx < half:
+                u = fx / half
+                c = sample(left, u, (fy - quarter - quarter * u) / half, 0.8)
+            if c is None and fx >= half:
+                u = (fx - half) / half
+                c = sample(right, u, (fy - half + quarter * u) / half, 0.62)
+            if c and c[3]:
+                out[y][x] = c
+    return [bytes(v for p in row for v in p) for row in out]
+
+
 def copy_icons():
     ICONS_OUT.mkdir(parents=True, exist_ok=True)
     count = 0
@@ -111,6 +165,12 @@ def copy_icons():
             print(f"  missing texture for {item_id}: {src}")
             continue
         dst = ICONS_OUT / f"{item_id}.png"
+        faces = block_faces(item_id)
+        frames = [load_frame(t) for t in faces] if faces else None
+        if frames and all(frames):
+            write_png(dst, 64, render_iso(*frames))
+            count += 1
+            continue
         png = read_png(src)
         if png and png[1] > png[0]:  # animated strip: keep the first frame
             width, _, rows = png
@@ -130,11 +190,31 @@ def item_name(item_id):
     return path.replace("_", " ").title()
 
 
+TAG_NAMES = {
+    "forge:gears/iron": "Iron Gear",
+    "forge:glass/colorless": "Glass",
+    "titanores:machine_blocks": "Machine Block",
+}
+
+
+def tag_slot(tag):
+    """Tag ingredients (any mod): readable label plus '(any)', the tag id in the tooltip."""
+    name = TAG_NAMES.get(tag) or tag.split(":", 1)[1].split("/")[-1].replace("_", " ").title()
+    label = html.escape(f"{name} (any)")
+    return f'<span class="mc-slot" title="{html.escape("#" + tag)}"><span class="mc-label">{label}</span></span>'
+
+
 def slot(ingredient, count=1):
     if not ingredient:
         return '<span class="mc-slot"></span>'
+    if isinstance(ingredient, dict) and "tag" in ingredient:
+        return tag_slot(ingredient["tag"])
     item_id = ingredient["item"] if isinstance(ingredient, dict) else ingredient
-    name = html.escape(item_name(item_id))
+    name = item_name(item_id)
+    potion = re.search(r'Potion:"?(?:minecraft:)?([a-z_]+)', ingredient.get("nbt", "")) if isinstance(ingredient, dict) else None
+    if potion:
+        name = f"{name} of {potion.group(1).replace('_', ' ').title()}"
+    name = html.escape(name)
     ns, path = item_id.split(":", 1)
     badge = f'<span class="mc-count">{count}</span>' if count > 1 else ""
     if ns == "titanores" and (ICONS_OUT / f"{path}.png").exists():
@@ -175,6 +255,17 @@ def render(recipe):
         station = "Furnace" if kind == "minecraft:smelting" else "Blast Furnace"
         seconds = recipe.get("cookingtime", 200) / 20
         return line([slot(recipe["ingredient"])], result, f"{station} · {seconds:g}s · {recipe.get('experience', 0)} XP")
+    if kind == "titanores:titan_factory":
+        left = (recipe.get("left") or []) + [None] * 3
+        right = (recipe.get("right") or []) + [None] * 3
+        cells = []
+        for r in range(3):
+            cells += [slot(left[r]), '<span class="mc-gap"></span>', slot(right[r])]
+        seconds = recipe.get("time", 200) / 20
+        label = f"Titan Factory · {recipe['energy']:,} FE · {seconds:g}s"
+        if recipe.get("mirrored"):
+            label += " · columns can be swapped"
+        return grid(cells, result, label)
     if kind == "minecraft:smithing":
         return line([slot(recipe["base"]), '<span class="mc-op">+</span>', slot(recipe["addition"])], result,
                     "Smithing Table · keeps enchantments")
