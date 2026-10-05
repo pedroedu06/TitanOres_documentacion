@@ -274,14 +274,19 @@ def render(recipe):
         if recipe.get("mirrored"):
             label += " · columns can be swapped"
         return grid(cells, result, label)
+    if kind == "titanores:titan_crafting":
+        cells = [slot(recipe["key"].get(ch)) if ch != " " else slot(None)
+                 for row in recipe["pattern"] for ch in row]
+        seconds = recipe.get("time", 200) / 20
+        return grid(cells, result, f"Titan Crafter · {recipe['energy']:,} FE · {seconds:g}s", "mc-grid mc-grid-9")
     if kind == "minecraft:smithing":
         return line([slot(recipe["base"]), '<span class="mc-op">+</span>', slot(recipe["addition"])], result,
                     "Smithing Table · keeps enchantments")
     return f"<p><em>Unsupported recipe type {html.escape(kind)}</em></p>"
 
 
-def grid(cells, result, label):
-    return (f'<div class="mc-recipe"><div class="mc-grid">{"".join(cells)}</div>'
+def grid(cells, result, label, grid_class="mc-grid"):
+    return (f'<div class="mc-recipe"><div class="{grid_class}">{"".join(cells)}</div>'
             f'<span class="mc-arrow">&#10140;</span>{result}<div class="mc-station">{label}</div></div>\n')
 
 

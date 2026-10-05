@@ -39,6 +39,16 @@
   grid-auto-rows: 36px;
 }
 
+/* Titan Crafter: 9x6 grid; scrolls sideways on narrow screens */
+.mc-grid-9 {
+  grid-template-columns: repeat(9, 36px);
+}
+
+.mc-recipe:has(.mc-grid-9) {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .mc-gap {
   width: 36px;
   height: 36px;

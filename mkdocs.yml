@@ -77,6 +77,7 @@ nav:
   - Special Items: items.md
   - Machines:
       - Titan Factory: titan-factory.md
+      - Titan Crafter: titan-crafter.md
   - Modpack Integration: modpack.md
   - Developers:
       - Development Setup: dev-setup.md

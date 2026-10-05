@@ -78,11 +78,18 @@ Upgrade slots are not accessible by automation.
 
 <div class="recipes">
 --8<-- "recipes/emberium_ingot_from_titan_factory.html"
+--8<-- "recipes/emberium_block_from_titan_factory.html"
 --8<-- "recipes/speed_upgrade_from_titan_factory.html"
+--8<-- "recipes/titan_crafter_from_titan_factory.html"
 </div>
 
 The Speed Upgrade needs the plain **Potion of Swiftness** (3:00): the long, strong and splash versions are not accepted.
 Its columns mix different items, so it has to be filled by hand (top automation cannot build it).
+
+!!! tip "JEI"
+    With JEI installed, press **U** on the Titan Factory (or **R** on a result) to see its recipes drawn on the machine
+    GUI, with the energy each one needs and an animated progress bar. In the machine GUI, click the arrows to open
+    them, and use JEI's **+** button to move the ingredients from your inventory into the right columns.
 
 ## Recipe format (modpacks)
 

@@ -11,10 +11,12 @@ An alloy of **Emberite** and **Titanium**, made in the Titan Factory. It has no 
 ## How to make
 
 Emberium is produced in the [Titan Factory](titan-factory.md): 3 Emberite Ingots in one column and 3 Titanium Ingots
-in the other, using **40,000,000 FE** over 60 seconds, for **3 Emberium Ingots**.
+in the other, using **40,000,000 FE** over 60 seconds, for **3 Emberium Ingots**. With blocks, 3 Blocks of Emberite + 3 Blocks of Titanium make **3 Blocks of Emberium**
+using **80,000,000 FE** over 120 seconds.
 
 <div class="recipes">
 --8<-- "recipes/emberium_ingot_from_titan_factory.html"
+--8<-- "recipes/emberium_block_from_titan_factory.html"
 </div>
 
 ## Storage

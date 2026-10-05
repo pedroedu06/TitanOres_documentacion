@@ -12,12 +12,12 @@ Root package: `com.titanmodpack.titanores` · mod id `titanores`.
 | `event` | Forge event handlers: armor abilities, automation blocker, mob spawns and dragon drop, health, tools, magnet |
 | `world` | Ore generation (`ModOreGeneration`) |
 | `loot` | Global loot modifiers (`auto_smelt`, `replace_with_item`) |
-| `recipe` | `titanores:upgrade_shaped` (keeps the NBT of the upgraded armor piece) and `titanores:titan_factory` (machine recipes) |
+| `recipe` | `titanores:upgrade_shaped` (keeps the NBT of the upgraded armor piece), `titanores:titan_factory` and `titanores:titan_crafting` (machine recipes) |
 | `energy` | `ModEnergyStorage`, the Forge Energy buffer used by machines |
 | `network` | `SimpleChannel` and the Night Vision toggle packet |
 | `client` | Client-only code: screens, keybinds and HUD (armor bar, compact health bar) |
-| `container` | Titan Factory container |
-| `compat` | Optional Curios integration (only loaded when Curios is present) |
+| `container` | Titan Factory and Titan Crafter containers |
+| `compat` | Optional Curios integration (only loaded when Curios is present) and `compat/jei` (JEI plugin + Titan Factory category, loaded by JEI) |
 | `command` | `/titanores` commands |
 
 ## Key systems
@@ -34,6 +34,9 @@ Root package: `com.titanmodpack.titanores` · mod id `titanores`.
   (100M FE, receive-only). Item capability per side: top = `TitanFactoryItemHandlers.TopInput` (column-aware insert),
   bottom = `BottomOutput`, sides = none; energy on every side. Recipes: `recipe/TitanFactoryRecipe`, type
   `titanores:titan_factory`. GUI data is synced through an `IIntArray` (energy split into two 16-bit halves).
+- **Titan Crafter:** `TitanCrafterTileEntity` (55 slots: 0-53 grid, 54 output; 200M FE). Same tick logic as the
+  factory. Top input = `TitanCrafterItemHandlers.TopInput` (only tops up slots already holding the item).
+  Recipes: `recipe/TitanCrafterRecipe`, type `titanores:titan_crafting` (fixed 9x6 pattern).
 
 ## Conventions
 
