@@ -62,3 +62,13 @@ The upgrade material for the [Titanium Star tools](tools.md) and [armor](armor.m
 <div class="recipes">
 --8<-- "recipes/titanium_star.html"
 </div>
+
+## Final items
+
+Endgame components of the Titan Modpack (about 10 are planned). They have **no recipe in the mod**: the modpack adds
+their recipes with KubeJS.
+
+| Item | Id |
+|---|---|
+| ![](assets/icons/source_crystal.png){ .mc-inline } Source Crystal | `titanores:source_crystal` |
+| ![](assets/icons/sponge_bob.png){ .mc-inline } Sponge Bob | `titanores:sponge_bob` (made with Create in the modpack) |
