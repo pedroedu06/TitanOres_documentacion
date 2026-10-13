@@ -10,5 +10,5 @@
 - **Titan Factory** machine: 100M FE buffer, gradual energy use, top input / bottom output automation, data-driven `titanores:titan_factory` recipes, upgrade slot for up to 4 Speed Upgrades (each doubles the speed). Crafting recipe for the machine (iron gears and machine blocks from any mod, via tags). Speed Upgrade recipe: 2 Clocks + 2 Potions of Swiftness + 2 Solarite Ingots, 800k FE.
 - **Titan Crafter** machine: 9×6 fixed-position shaped crafting (`titanores:titan_crafting`), 200M FE buffer, template-style top input, made in the Titan Factory.
 - **JEI:** Titan Factory recipe category and Titan Crafter recipe categories (machine GUI, energy needed, animated progress, + button to fill the machine).
-- **Final items:** Source Crystal and Sponge Bob (the modpack's endgame components; recipes via KubeJS).
+- **Final items:** Source Crystal, Sponge Bob, Ancestral Seed, World Core and Raid King (the modpack's endgame components; recipes via KubeJS).
 - `/titanores hearts` command, Curios and Mantle integration.
