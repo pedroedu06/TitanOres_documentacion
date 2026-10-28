@@ -1,9 +1,13 @@
 # Changelog
 
-## 1.0.0 (in development)
+## 1.0.1
+
+- **Ore processing:** 2x in any crusher (Mekanism, IE, Create, Occultism, Blood Magic) and up to 5x with Mekanism (clumps, shards, crystals, dirty dust, slurries); dust smelts into ingots.
+- **Farming:** Blue Soil and Solarite, Emberite and Titanium crops (seeds, essences, 25% extra seed chance, 8 essences → 1 nugget; slower than wheat, no bone meal).
+
+## 1.0.0
 
 - **Ores:** Solarite (deep oceans), Emberite (Warped Forest) and Titanium (End Highlands), with manual-mining protection. The ore items show where to find them (dimension, biome and Y range).
-- **Farming:** Blue Soil and Solarite, Emberite and Titanium crops (seeds, essences, 8 essences → 1 nugget; slower than wheat, no bone meal).
 - **Emberium alloy:** made in the Titan Factory (3 Emberite + 3 Titanium Ingots → 3 Emberium, 40M FE; or 3 + 3 blocks → 3 Emberium Blocks, 80M FE).
 - **Tools:** Solarite, Emberite, Titanium (Area Mode, tree felling, fire aspect, auto-smelt) and Titanium Star.
 - **Armor:** Solarite, Emberite, Titanium and Titanium Star (90% damage reduction, flight, night vision), with per-piece abilities and a custom armor bar.

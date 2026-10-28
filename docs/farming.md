@@ -14,9 +14,9 @@ Mine it with a shovel.
 
 | Seeds | Crop | Harvest (mature) |
 |---|---|---|
-| ![](assets/icons/solarite_seed.png){ .mc-inline } Solarite Seeds | `titanores:solarite_crop` | 1 ![](assets/icons/solarite_essence.png){ .mc-inline } Solarite Essence + 1 seed back |
-| ![](assets/icons/emberite_seed.png){ .mc-inline } Emberite Seeds | `titanores:emberite_crop` | 1 ![](assets/icons/emberite_essence.png){ .mc-inline } Emberite Essence + 1 seed back |
-| ![](assets/icons/titanium_seed.png){ .mc-inline } Titanium Seeds | `titanores:titanium_crop` | 1 ![](assets/icons/titanium_essence.png){ .mc-inline } Titanium Essence + 1 seed back |
+| ![](assets/icons/solarite_seed.png){ .mc-inline } Solarite Seeds | `titanores:solarite_crop` | 1 ![](assets/icons/solarite_essence.png){ .mc-inline } Solarite Essence + 1 seed back (+25% chance of an extra seed) |
+| ![](assets/icons/emberite_seed.png){ .mc-inline } Emberite Seeds | `titanores:emberite_crop` | 1 ![](assets/icons/emberite_essence.png){ .mc-inline } Emberite Essence + 1 seed back (+25% chance of an extra seed) |
+| ![](assets/icons/titanium_seed.png){ .mc-inline } Titanium Seeds | `titanores:titanium_crop` | 1 ![](assets/icons/titanium_essence.png){ .mc-inline } Titanium Essence + 1 seed back (+25% chance of an extra seed) |
 
 - Crops have 8 growth stages and need light, like wheat, but grow **slower** (about 45 minutes on average).
 - Breaking an unripe crop only gives the seed back.

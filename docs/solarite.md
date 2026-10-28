@@ -63,7 +63,7 @@ Solarite tools use a special stick made from two ingots.
 | ![](assets/icons/solarite_ore.png){ .mc-inline } Solarite Ore | `titanores:solarite_ore` | drops itself |
 | ![](assets/icons/solarite_ingot.png){ .mc-inline } Solarite Ingot | `titanores:solarite_ingot` | tag `forge:ingots/solarite` |
 | ![](assets/icons/solarite_nugget.png){ .mc-inline } Solarite Nugget | `titanores:solarite_nugget` | tag `forge:nuggets/solarite` |
-| ![](assets/icons/solarite_dust.png){ .mc-inline } Solarite Dust | `titanores:solarite_dust` | tag `forge:dusts/solarite` (no recipe yet, for ore processing mods) |
+| ![](assets/icons/solarite_dust.png){ .mc-inline } Solarite Dust | `titanores:solarite_dust` | tag `forge:dusts/solarite`, smelts into an ingot; see [Ore Processing](ore-processing.md) |
 | ![](assets/icons/solarite_seed.png){ .mc-inline } Solarite Seeds | `titanores:solarite_seed` | tag `forge:seeds` (see [Farming](farming.md)) |
 | ![](assets/icons/solarite_essence.png){ .mc-inline } Solarite Essence | `titanores:solarite_essence` | tag `titanores:essences` (see [Farming](farming.md)) |
 | ![](assets/icons/solarite_block.png){ .mc-inline } Block of Solarite | `titanores:solarite_block` | needs the same pickaxe as the ore |
