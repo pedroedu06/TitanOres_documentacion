@@ -57,4 +57,6 @@ Smelt the ore to get an ingot (the blast furnace is twice as fast).
 | ![](assets/icons/emberite_ingot.png){ .mc-inline } Emberite Ingot | `titanores:emberite_ingot` | tag `forge:ingots/emberite` |
 | ![](assets/icons/emberite_nugget.png){ .mc-inline } Emberite Nugget | `titanores:emberite_nugget` | tag `forge:nuggets/emberite` |
 | ![](assets/icons/emberite_dust.png){ .mc-inline } Emberite Dust | `titanores:emberite_dust` | tag `forge:dusts/emberite` (no recipe yet, for ore processing mods) |
+| ![](assets/icons/emberite_seed.png){ .mc-inline } Emberite Seeds | `titanores:emberite_seed` | tag `forge:seeds` (see [Farming](farming.md)) |
+| ![](assets/icons/emberite_essence.png){ .mc-inline } Emberite Essence | `titanores:emberite_essence` | tag `titanores:essences` (see [Farming](farming.md)) |
 | ![](assets/icons/emberite_block.png){ .mc-inline } Block of Emberite | `titanores:emberite_block` | needs the same pickaxe as the ore |

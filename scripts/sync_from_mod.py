@@ -109,6 +109,8 @@ def block_faces(item_id):
     t = block.get("textures", {})
     if block.get("parent") == "minecraft:block/cube_all" and "all" in t:
         return t["all"], t["all"], t["all"]
+    if block.get("parent") == "minecraft:block/cube_bottom_top" and "top" in t:
+        return t["top"], t.get("side", t["top"]), t.get("side", t["top"])
     if block.get("parent") == "minecraft:block/cube" and "up" in t:
         return t["up"], t.get("north", t["up"]), t.get("east", t["up"])
     return None
@@ -199,6 +201,7 @@ TAG_NAMES = {
     "forge:gears/iron": "Iron Gear",
     "forge:glass/colorless": "Glass",
     "titanores:machine_blocks": "Machine Block",
+    "minecraft:music_discs": "Music Disc",
 }
 
 

@@ -1,11 +1,11 @@
 # Final Items
 
-The endgame components of the Titan Modpack (about 10 are planned). They are the ingredients of the final crafts in
+The endgame components of the Titan Modpack (10 in total). They are the ingredients of the final crafts in
 the [Titan Crafter](titan-crafter.md).
 
 !!! info "Recipes"
-    These items have **no recipe in the mod**: the modpack adds them with KubeJS. Each section below will show its
-    recipe once it exists.
+    Recipes that only use vanilla and TitanOres items are part of the mod; recipes with items from other mods are
+    added by the modpack with KubeJS. Each section below shows its recipe once it exists.
 
 | Item | Id | How to get |
 |---|---|---|
@@ -14,6 +14,11 @@ the [Titan Crafter](titan-crafter.md).
 | ![](assets/icons/ancestral_seed.png){ .mc-inline } [Ancestral Seed](#ancestral-seed) | `titanores:ancestral_seed` | Crafted in the modpack |
 | ![](assets/icons/world_core.png){ .mc-inline } [World Core](#world-core) | `titanores:world_core` | Crafted in the modpack |
 | ![](assets/icons/raid_king.png){ .mc-inline } [Raid King](#raid-king) | `titanores:raid_king` | Max Bad Omen raid drop |
+| ![](assets/icons/antenna.png){ .mc-inline } [Antenna](#antenna) | `titanores:antenna` | Crafted in the modpack |
+| ![](assets/icons/calculator.png){ .mc-inline } [Calculator](#calculator) | `titanores:calculator` | Crafted in the modpack |
+| ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanores:iron_man_mask` | Crafted in the modpack |
+| ![](assets/icons/music_disc_titanium.png){ .mc-inline } [Titanium Music Disc](#music-disc-titanium) | `titanores:music_disc_titanium` | Titan Crafter |
+| ![](assets/icons/universal_remote.png){ .mc-inline } [Universal Remote](#universal-remote) | `titanores:universal_remote` | Crafted in the modpack |
 
 ## Source Crystal { #source-crystal }
 
@@ -49,3 +54,38 @@ loaded).
 
 **Effect:** worn on the head (helmet slot or the Curios **head** slot) it gives **endless Hero of the Village V** (or
 the highest level if a mod raises the Bad Omen cap). It has no armor value.
+
+## Antenna { #antenna }
+
+![](assets/icons/antenna.png){ .mc-inline } `titanores:antenna`
+
+Crafted in the modpack (KubeJS). Recipe coming soon.
+
+## Calculator { #calculator }
+
+![](assets/icons/calculator.png){ .mc-inline } `titanores:calculator`
+
+Crafted in the modpack (KubeJS). Recipe coming soon.
+
+## Iron Man Mask { #iron-man-mask }
+
+![](assets/icons/iron_man_mask.png){ .mc-inline } `titanores:iron_man_mask`
+
+Crafted in the modpack (KubeJS). Recipe coming soon.
+
+## Titanium Music Disc { #music-disc-titanium }
+
+![](assets/icons/music_disc_titanium.png){ .mc-inline } `titanores:music_disc_titanium`
+
+Made in the [Titan Crafter](titan-crafter.md): **36 Titanium Ingots** around **any music disc** in the center,
+using **36,000,000 FE** over 60 seconds.
+
+<div class="recipes">
+--8<-- "recipes/music_disc_titanium_from_titan_crafter.html"
+</div>
+
+## Universal Remote { #universal-remote }
+
+![](assets/icons/universal_remote.png){ .mc-inline } `titanores:universal_remote`
+
+Crafted in the modpack (KubeJS). Recipe coming soon.

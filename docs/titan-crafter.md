@@ -2,7 +2,7 @@
 
 ![](assets/icons/titan_crafter.png){ .mc-inline } `titanores:titan_crafter`
 
-An energy-powered **9×6 crafting grid** for the mod's final crafts. Recipes are shaped with **fixed positions**: every
+An energy-powered **9×7 crafting grid** for the mod's final crafts. Recipes are shaped with **fixed positions**: every
 item has to be in its exact slot.
 
 !!! warning "Work in progress"
@@ -55,6 +55,7 @@ The iron gears are temporary: the plan is to use diamond gears once the modpack 
   "type": "titanores:titan_crafting",
   "pattern": [
     "         ",
+    "         ",
     "   AAA   ",
     "   ABA   ",
     "   AAA   ",
@@ -75,7 +76,7 @@ The ids above are placeholders that only show the format.
 
 | Field | Meaning |
 |---|---|
-| `pattern` | Exactly **6 rows of 9 characters**. Each character is one grid slot; a space means the slot must be empty. No offset or mirroring. |
+| `pattern` | Exactly **7 rows of 9 characters**. Each character is one grid slot; a space means the slot must be empty. No offset or mirroring. |
 | `key` | Symbol → ingredient. Items, tags (`{"tag": ...}`) and `forge:nbt` ingredients work. |
 | `energy` | Total FE for one craft. |
 | `time` | Ticks (20 ticks = 1 second). FE per tick = `energy / time`. |

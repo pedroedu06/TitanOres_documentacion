@@ -65,4 +65,6 @@ The upgrade material for the final gear tier. See [Special Items](items.md#titan
 | ![](assets/icons/titanium_ingot.png){ .mc-inline } Titanium Ingot | `titanores:titanium_ingot` | tag `forge:ingots/titanium` |
 | ![](assets/icons/titanium_nugget.png){ .mc-inline } Titanium Nugget | `titanores:titanium_nugget` | tag `forge:nuggets/titanium` |
 | ![](assets/icons/titanium_dust.png){ .mc-inline } Titanium Dust | `titanores:titanium_dust` | tag `forge:dusts/titanium` (no recipe yet, for ore processing mods) |
+| ![](assets/icons/titanium_seed.png){ .mc-inline } Titanium Seeds | `titanores:titanium_seed` | tag `forge:seeds` (see [Farming](farming.md)) |
+| ![](assets/icons/titanium_essence.png){ .mc-inline } Titanium Essence | `titanores:titanium_essence` | tag `titanores:essences` (see [Farming](farming.md)) |
 | ![](assets/icons/titanium_block.png){ .mc-inline } Block of Titanium | `titanores:titanium_block` | needs the same pickaxe as the ore |

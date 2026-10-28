@@ -34,9 +34,9 @@ Root package: `com.titanmodpack.titanores` · mod id `titanores`.
   (100M FE, receive-only). Item capability per side: top = `TitanFactoryItemHandlers.TopInput` (column-aware insert),
   bottom = `BottomOutput`, sides = none; energy on every side. Recipes: `recipe/TitanFactoryRecipe`, type
   `titanores:titan_factory`. GUI data is synced through an `IIntArray` (energy split into two 16-bit halves).
-- **Titan Crafter:** `TitanCrafterTileEntity` (55 slots: 0-53 grid, 54 output; 200M FE). Same tick logic as the
+- **Titan Crafter:** `TitanCrafterTileEntity` (64 slots: 0-62 grid, 63 output; 200M FE). Same tick logic as the
   factory. Top input = `TitanCrafterItemHandlers.TopInput` (only tops up slots already holding the item).
-  Recipes: `recipe/TitanCrafterRecipe`, type `titanores:titan_crafting` (fixed 9x6 pattern).
+  Recipes: `recipe/TitanCrafterRecipe`, type `titanores:titan_crafting` (fixed 9x7 pattern).
 
 ## Conventions
 
