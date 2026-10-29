@@ -26,6 +26,8 @@ the [Titan Crafter](titan-crafter.md).
 
 Made with a **Hephaestus Forge ritual** (Forbidden & Arcanus), forge **tier 3 or higher**:
 
+![Source Crystal ritual in JEI (Hephaestus Forge)](assets/recipes/source_crystal_ritual.png)
+
 | Place | Item |
 |---|---|
 | Forge (center) | Diamond |
@@ -46,16 +48,7 @@ The essence amounts are above the tier 2 limits, so the ritual needs a tier 3+ f
 
 Made with **Create Mechanical Crafters** in a **7x8 grid** (recipe added by the modpack with KubeJS):
 
-```
-AAAAAAA
-AAAAAAA
-ACBABCA
-AAAAAAA
-AAAAAAA
-DDDEDDD
-FGGEGGF
-DDDDDDD
-```
+![Sponge Bob in JEI (Create Mechanical Crafting)](assets/recipes/sponge_bob_mechanical_crafting.png)
 
 | Key | Item | Amount |
 |---|---|---|
