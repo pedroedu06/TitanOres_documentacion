@@ -9,8 +9,8 @@ the [Titan Crafter](titan-crafter.md).
 
 | Item | Id | How to get |
 |---|---|---|
-| ![](assets/icons/source_crystal.png){ .mc-inline } [Source Crystal](#source-crystal) | `titanores:source_crystal` | Crafted in the modpack |
-| ![](assets/icons/sponge_bob.png){ .mc-inline } [Sponge Bob](#sponge-bob) | `titanores:sponge_bob` | Made with Create in the modpack |
+| ![](assets/icons/source_crystal.png){ .mc-inline } [Source Crystal](#source-crystal) | `titanores:source_crystal` | Hephaestus Forge ritual (Forbidden & Arcanus) |
+| ![](assets/icons/sponge_bob.png){ .mc-inline } [Sponge Bob](#sponge-bob) | `titanores:sponge_bob` | Create Mechanical Crafters |
 | ![](assets/icons/ancestral_seed.png){ .mc-inline } [Ancestral Seed](#ancestral-seed) | `titanores:ancestral_seed` | Crafted in the modpack |
 | ![](assets/icons/world_core.png){ .mc-inline } [World Core](#world-core) | `titanores:world_core` | Crafted in the modpack |
 | ![](assets/icons/raid_king.png){ .mc-inline } [Raid King](#raid-king) | `titanores:raid_king` | Max Bad Omen raid drop |
@@ -24,13 +24,48 @@ the [Titan Crafter](titan-crafter.md).
 
 ![](assets/icons/source_crystal.png){ .mc-inline } `titanores:source_crystal`
 
-Crafted in the modpack (KubeJS). Recipe coming soon.
+Made with a **Hephaestus Forge ritual** (Forbidden & Arcanus), forge **tier 3 or higher**:
+
+| Place | Item |
+|---|---|
+| Forge (center) | Diamond |
+| Pedestals (any order) | Gaia Ingot (Botania), any Dragon Heart (Ice and Fire: fire, ice or lightning), Insanium Essence (Mystical Agradditions), Magic Map Focus (Twilight Forest), 2 Dragonstone (Botania) |
+
+| Essence | Amount |
+|---|---|
+| Aureal | 600 |
+| Souls | 8 |
+| Blood | 20,000 |
+| Experience | 350 |
+
+The essence amounts are above the tier 2 limits, so the ritual needs a tier 3+ forge.
 
 ## Sponge Bob { #sponge-bob }
 
 ![](assets/icons/sponge_bob.png){ .mc-inline } `titanores:sponge_bob`
 
-Made with **Create** in the modpack (KubeJS). Recipe coming soon.
+Made with **Create Mechanical Crafters** in a **7x8 grid** (recipe added by the modpack with KubeJS):
+
+```
+AAAAAAA
+AAAAAAA
+ACBABCA
+AAAAAAA
+AAAAAAA
+DDDEDDD
+FGGEGGF
+DDDDDDD
+```
+
+| Key | Item | Amount |
+|---|---|---|
+| A | Yellow Wool | 31 |
+| B | Light Blue Wool | 2 |
+| C | White Wool | 2 |
+| D | Brown Concrete | 13 |
+| E | Red Wool | 2 |
+| F | Brown Wool | 2 |
+| G | Black Concrete | 4 |
 
 ## Ancestral Seed { #ancestral-seed }
 

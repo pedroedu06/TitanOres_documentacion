@@ -62,3 +62,25 @@ The upgrade material for the [Titanium Star tools](tools.md) and [armor](armor.m
 <div class="recipes">
 --8<-- "recipes/titanium_star.html"
 </div>
+
+## Hephaestus Forge Upgrades
+
+For **Forbidden & Arcanus**: in the 1.16 version the Hephaestus Forge has tiers but no way to upgrade them. These
+items do it: **right-click the forge** with the next tier's upgrade (a tier 1 forge needs Tier II, and so on).
+
+| Item | Id | Forge tier |
+|---|---|---|
+| ![](assets/icons/forge_upgrade_tier_2.png){ .mc-inline } Forge Upgrade (Tier II) | `titanores:forge_upgrade_tier_2` | 1 → 2 |
+| ![](assets/icons/forge_upgrade_tier_3.png){ .mc-inline } Forge Upgrade (Tier III) | `titanores:forge_upgrade_tier_3` | 2 → 3 |
+| ![](assets/icons/forge_upgrade_tier_4.png){ .mc-inline } Forge Upgrade (Tier IV) | `titanores:forge_upgrade_tier_4` | 3 → 4 |
+| ![](assets/icons/forge_upgrade_tier_5.png){ .mc-inline } Forge Upgrade (Tier X) | `titanores:forge_upgrade_tier_5` | 4 → X |
+
+In the Titan Modpack they are made with Hephaestus Forge rituals adapted from Forbidden & Arcanus 1.21.1 (each ritual
+fits the essence limits of the forge's current tier; the 1.16 forge has only 6 pedestals):
+
+| Upgrade | Forge item | Pedestals | Aureal / Souls / Blood |
+|---|---|---|---|
+| Tier II | Edelwood Planks | 3 Arcane Crystal, 3 Spawner Scrap | 200 / 1 / 5,000 |
+| Tier III | Chiseled Polished Darkstone | 3 Arcane Crystal, 3 Arcane Gold Ingot | 500 / 5 / 9,000 |
+| Tier IV | Chiseled Polished Darkstone | 3 Stellarite Piece, 3 Rune | 800 / 10 / 12,000 |
+| Tier X | Stellarite Block | 2 Nether Star, 2 Dark Nether Star, 2 Dragon Scale | 1,000 / 100 / 20,000 |

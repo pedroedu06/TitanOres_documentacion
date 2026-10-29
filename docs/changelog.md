@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- **Hephaestus Forge Upgrades** (Tier II, III, IV, X): right-click a Forbidden & Arcanus Hephaestus Forge to raise its tier.
+
 ## 1.0.1
 
 - **Ore processing:** 2x in any crusher (Mekanism, IE, Create, Occultism, Blood Magic) and up to 5x with Mekanism (clumps, shards, crystals, dirty dust, slurries); dust smelts into ingots.
