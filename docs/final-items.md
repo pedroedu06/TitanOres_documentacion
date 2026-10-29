@@ -102,6 +102,8 @@ Crafted in the modpack (KubeJS). Recipe coming soon.
 Made in the **PneumaticCraft Pressure Chamber** at **5.0 bar** (recipe added by the modpack with KubeJS). Drop all the
 items into the pressurized chamber; their order does not matter.
 
+![Iron Man Mask in JEI (Pressure Chamber, 5.0 bar)](assets/recipes/iron_man_mask_pressure_chamber.png)
+
 | Item | Mod | Amount |
 |---|---|---|
 | Red Wool | Minecraft | 3 |
