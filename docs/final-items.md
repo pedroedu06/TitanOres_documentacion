@@ -11,7 +11,7 @@ the [Titan Crafter](titan-crafter.md).
 |---|---|---|
 | ![](assets/icons/source_crystal.png){ .mc-inline } [Source Crystal](#source-crystal) | `titanutilities:source_crystal` | Hephaestus Forge ritual (Forbidden & Arcanus) |
 | ![](assets/icons/sponge_bob.png){ .mc-inline } [Sponge Bob](#sponge-bob) | `titanutilities:sponge_bob` | Create Mechanical Crafters |
-| ![](assets/icons/ancestral_seed.png){ .mc-inline } [Ancestral Seed](#ancestral-seed) | `titanutilities:ancestral_seed` | Crafted in the modpack |
+| ![](assets/icons/ancestral_seed.png){ .mc-inline } [Ancestral Seed](#ancestral-seed) | `titanutilities:ancestral_seed` | Infusion Altar (Mystical Agriculture) |
 | ![](assets/icons/world_core.png){ .mc-inline } [World Core](#world-core) | `titanutilities:world_core` | Crafted in the modpack |
 | ![](assets/icons/raid_king.png){ .mc-inline } [Raid King](#raid-king) | `titanutilities:raid_king` | Max Bad Omen raid drop |
 | ![](assets/icons/antenna.png){ .mc-inline } [Antenna](#antenna) | `titanutilities:antenna` | Crafted in the modpack |
@@ -64,7 +64,16 @@ Made with **Create Mechanical Crafters** in a **7x8 grid** (recipe added by the 
 
 ![](assets/icons/ancestral_seed.png){ .mc-inline } `titanutilities:ancestral_seed`
 
-Crafted in the modpack (KubeJS). Recipe coming soon.
+Made on the Mystical Agriculture **Infusion Altar** (recipe added by the modpack with KubeJS):
+
+![Ancestral Seed in JEI (Infusion)](assets/recipes/ancestral_seed_infusion.png)
+
+| What you need | Amount | Where |
+|---|---|---|
+| ![](assets/icons/emberite_seed.png){ .mc-inline } Emberite Seeds | 1 | on the altar |
+| ![](assets/icons/emberium_block.png){ .mc-inline } Emberium Block | 4 | pedestals |
+| Insanium Block | 4 | pedestals |
+| Infusion Crystal (or Master Infusion Crystal) | — | right-click the altar to start |
 
 ## World Core { #world-core }
 
@@ -82,6 +91,8 @@ loaded).
 
 **Effect:** worn on the head (helmet slot or the Curios **head** slot) it gives **endless Hero of the Village V** (or
 the highest level if a mod raises the Bad Omen cap). It has no armor value.
+
+In game, open the crown in **JEI** (R or U): an **Information** page explains how to get it.
 
 ## Antenna { #antenna }
 
