@@ -7,7 +7,7 @@
 ![Titanium Star](assets/icons/titanium_star.png)
 </div>
 
-**TitanOres** is the endgame progression mod of the **Titan Modpack**. It adds a chain of rare ores spread across
+**TitanOres** is the endgame progression mod of the **TitanMods** modpack. It adds a chain of rare ores spread across
 the three dimensions, and a full line of tools, armor and special items that go well beyond netherite.
 
 ## Goals
@@ -23,14 +23,15 @@ the three dimensions, and a full line of tools, armor and special items that go 
 |---|---|
 | Minecraft | **1.16.5** |
 | Forge | **36.2.42** |
-| Mod version | **1.0.0** (in development) |
+| Mod version | **1.0.5** |
+| Required | **Titan Utilities 1.0.0** (machines, final items and Blue Soil) |
 | Java (to play) | **8** |
 | Optional | [Curios API](https://www.curseforge.com/minecraft/mc-mods/curios) 1.16.5-4.x (magnet charm slot) |
 
 ## Installation (players)
 
 1. Install **Forge 1.16.5-36.2.42** (or newer 36.x).
-2. Drop `titanores-1.0.0.jar` into the instance `mods` folder.
+2. Drop `titanores-1.0.5.jar` and `titanutilities-1.0.0.jar` into the instance `mods` folder.
 3. Optional: add Curios API to wear the Solarite Magnet in a charm slot.
 
 !!! tip "Look up recipes in game"

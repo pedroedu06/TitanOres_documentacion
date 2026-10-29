@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.0.5
+
+- The **final items** (Source Crystal, Sponge Bob, Ancestral Seed, World Core, Raid King, Antenna, Calculator, Iron Man
+  Mask, Titanium Music Disc, Universal Remote) and **Blue Soil** moved to **Titan Utilities** (ids `titanutilities:*`).
+  Essence crops now grow on the `#titanores:essence_crop_soil` block tag (Titan Utilities adds Blue Soil).
+
+## 1.0.4
+
+- The **Hephaestus Forge Upgrades** moved to **Titan Utilities** (`titanutilities:forge_upgrade_tier_2..5`).
+- Titan Crafter recipe (Titan Utilities): the iron blocks were replaced by **Enderium Blocks**.
+
+## 1.0.3
+
+- New companion mod **Titan Utilities** (required by the TitanMods modpack). The **Titan Factory**, **Titan Crafter**
+  and **Speed Upgrade** moved there, with their recipes and JEI categories (ids `titanutilities:*`, machine block tag
+  `#titanutilities:machine_blocks`).
+- Package renamed to `com.titanmods.titanores`.
+
 ## 1.0.2
 
 - **Hephaestus Forge Upgrades** (Tier II, III, IV, X): right-click a Forbidden & Arcanus Hephaestus Forge to raise its tier.

@@ -1,18 +1,24 @@
 # Architecture
 
-Root package: `com.titanmodpack.titanores` · mod id `titanores`.
+Root package: `com.titanmods.titanores` · mod id `titanores`.
+
+!!! note "Titan Utilities"
+    The machines (Titan Factory, Titan Crafter, energy, containers, JEI), the Forge Upgrades, the final items and Blue Soil
+    moved to the companion mod **Titan Utilities** (`com.titanmods.titanutilities`, mod id `titanutilities`). It
+    depends on TitanOres; TitanOres does not depend on it. The sections below marked *(Titan Utilities)* describe code
+    that lives there.
 
 ## Packages
 
 | Package | Contents |
 |---|---|
 | `init` | All registries (`DeferredRegister`): blocks, items, tile entities, containers, recipe serializers, loot modifiers, tags and the creative tab |
-| `block` | Custom blocks and tile entities: manual-mining ore, lantern and invisible light, Titan Factory |
+| `block` | Custom blocks and tile entities: manual-mining ore, lantern and invisible light, essence crops |
 | `item` | Tool tiers (`ModItemTier`), armor materials (`ModArmorMaterial`), custom items and the Area Mode helper |
 | `event` | Forge event handlers: armor abilities, automation blocker, mob spawns and dragon drop, health, tools, magnet |
 | `world` | Ore generation (`ModOreGeneration`) |
 | `loot` | Global loot modifiers (`auto_smelt`, `replace_with_item`) |
-| `recipe` | `titanores:upgrade_shaped` (keeps the NBT of the upgraded armor piece), `titanores:titan_factory` and `titanores:titan_crafting` (machine recipes) |
+| `recipe` | `titanores:upgrade_shaped` (keeps the NBT of the upgraded armor piece); the machine recipe types are in Titan Utilities |
 | `energy` | `ModEnergyStorage`, the Forge Energy buffer used by machines |
 | `network` | `SimpleChannel` and the Night Vision toggle packet |
 | `client` | Client-only code: screens, keybinds and HUD (armor bar, compact health bar) |
@@ -30,13 +36,13 @@ Root package: `com.titanmodpack.titanores` · mod id `titanores`.
   durability and override `isEnchantable`.
 - **Titanium tools:** `AreaToolHelper` handles the Area Mode NBT flag, the toggle and the 3×3 breaking through
   `ServerPlayerEntity.gameMode.destroyBlock` (respects protections and normal drops), with a recursion guard.
-- **Titan Factory:** `TitanFactoryTileEntity` (tickable) holds a 7-slot `ItemStackHandler` and a `ModEnergyStorage`
+- **Titan Factory** *(Titan Utilities)*: `TitanFactoryTileEntity` (tickable) holds a 7-slot `ItemStackHandler` and a `ModEnergyStorage`
   (100M FE, receive-only). Item capability per side: top = `TitanFactoryItemHandlers.TopInput` (column-aware insert),
   bottom = `BottomOutput`, sides = none; energy on every side. Recipes: `recipe/TitanFactoryRecipe`, type
-  `titanores:titan_factory`. GUI data is synced through an `IIntArray` (energy split into two 16-bit halves).
-- **Titan Crafter:** `TitanCrafterTileEntity` (64 slots: 0-62 grid, 63 output; 200M FE). Same tick logic as the
+  `titanutilities:titan_factory`. GUI data is synced through an `IIntArray` (energy split into two 16-bit halves).
+- **Titan Crafter** *(Titan Utilities)*: `TitanCrafterTileEntity` (64 slots: 0-62 grid, 63 output; 200M FE). Same tick logic as the
   factory. Top input = `TitanCrafterItemHandlers.TopInput` (only tops up slots already holding the item).
-  Recipes: `recipe/TitanCrafterRecipe`, type `titanores:titan_crafting` (fixed 9x7 pattern).
+  Recipes: `recipe/TitanCrafterRecipe`, type `titanutilities:titan_crafting` (fixed 9x7 pattern).
 
 ## Conventions
 

@@ -1,6 +1,8 @@
 # Titan Factory
 
-![](assets/icons/titan_factory.png){ .mc-inline } `titanores:titan_factory`
+![](assets/icons/titan_factory.png){ .mc-inline } `titanutilities:titan_factory`
+
+Part of **Titan Utilities**, the TitanMods companion mod (requires TitanOres).
 
 An energy-powered machine that combines two columns of items into one result.
 
@@ -18,11 +20,11 @@ An energy-powered machine that combines two columns of items into one result.
 | Emberite Ingot / Solarite Ingot | from this mod |
 | Glass | any colorless glass (`#forge:glass/colorless`) |
 | Iron Gear | any mod's iron gear (`#forge:gears/iron`): Thermal Foundation, Immersive Engineering, ... |
-| Machine Block | any block in `#titanores:machine_blocks` |
+| Machine Block | any block in `#titanutilities:machine_blocks` |
 
-The `titanores:machine_blocks` tag ships with optional entries (ignored when the mod is missing): Mekanism Steel
+The `titanutilities:machine_blocks` tag ships with optional entries (ignored when the mod is missing): Mekanism Steel
 Casing, Thermal Machine Frame, Industrial Foregoing Machine Frame, Immersive Engineering Light Engineering Block and
-RFTools Machine Frame. Modpacks can add more with a datapack (`data/titanores/tags/items/machine_blocks.json` with
+RFTools Machine Frame. Modpacks can add more with a datapack (`data/titanutilities/tags/items/machine_blocks.json` with
 `"replace": false`) or KubeJS.
 
 ## How it works
@@ -45,7 +47,7 @@ RFTools Machine Frame. Modpacks can add more with a datapack (`data/titanores/ta
 
 ## Speed upgrades
 
-![](assets/icons/speed_upgrade.png){ .mc-inline } **Speed Upgrade** (`titanores:speed_upgrade`) goes into the
+![](assets/icons/speed_upgrade.png){ .mc-inline } **Speed Upgrade** (`titanutilities:speed_upgrade`) goes into the
 **upgrade slot** in the tab on the right side of the GUI, next to the energy bar (up to 4 stacked). Hover the tab icon to see how many are installed.
 
 | Upgrades | Speed | Emberium recipe time | FE/t |
@@ -97,7 +99,7 @@ Recipes are data-driven (`data/<namespace>/recipes/*.json`) and can be added or 
 
 ```json
 {
-  "type": "titanores:titan_factory",
+  "type": "titanutilities:titan_factory",
   "left":  [ {"item": "titanores:emberite_ingot"}, {"item": "titanores:emberite_ingot"}, {"item": "titanores:emberite_ingot"} ],
   "right": [ {"item": "titanores:titanium_ingot"}, {"item": "titanores:titanium_ingot"}, {"item": "titanores:titanium_ingot"} ],
   "mirrored": true,

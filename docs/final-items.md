@@ -1,6 +1,6 @@
 # Final Items
 
-The endgame components of the Titan Modpack (10 in total). They are the ingredients of the final crafts in
+The endgame components of the TitanMods modpack (10 in total). They are part of **Titan Utilities**, the TitanMods companion mod (requires TitanOres). They are the ingredients of the final crafts in
 the [Titan Crafter](titan-crafter.md).
 
 !!! info "Recipes"
@@ -9,20 +9,20 @@ the [Titan Crafter](titan-crafter.md).
 
 | Item | Id | How to get |
 |---|---|---|
-| ![](assets/icons/source_crystal.png){ .mc-inline } [Source Crystal](#source-crystal) | `titanores:source_crystal` | Hephaestus Forge ritual (Forbidden & Arcanus) |
-| ![](assets/icons/sponge_bob.png){ .mc-inline } [Sponge Bob](#sponge-bob) | `titanores:sponge_bob` | Create Mechanical Crafters |
-| ![](assets/icons/ancestral_seed.png){ .mc-inline } [Ancestral Seed](#ancestral-seed) | `titanores:ancestral_seed` | Crafted in the modpack |
-| ![](assets/icons/world_core.png){ .mc-inline } [World Core](#world-core) | `titanores:world_core` | Crafted in the modpack |
-| ![](assets/icons/raid_king.png){ .mc-inline } [Raid King](#raid-king) | `titanores:raid_king` | Max Bad Omen raid drop |
-| ![](assets/icons/antenna.png){ .mc-inline } [Antenna](#antenna) | `titanores:antenna` | Crafted in the modpack |
-| ![](assets/icons/calculator.png){ .mc-inline } [Calculator](#calculator) | `titanores:calculator` | Crafted in the modpack |
-| ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanores:iron_man_mask` | Crafted in the modpack |
-| ![](assets/icons/music_disc_titanium.png){ .mc-inline } [Titanium Music Disc](#music-disc-titanium) | `titanores:music_disc_titanium` | Titan Crafter |
-| ![](assets/icons/universal_remote.png){ .mc-inline } [Universal Remote](#universal-remote) | `titanores:universal_remote` | Crafted in the modpack |
+| ![](assets/icons/source_crystal.png){ .mc-inline } [Source Crystal](#source-crystal) | `titanutilities:source_crystal` | Hephaestus Forge ritual (Forbidden & Arcanus) |
+| ![](assets/icons/sponge_bob.png){ .mc-inline } [Sponge Bob](#sponge-bob) | `titanutilities:sponge_bob` | Create Mechanical Crafters |
+| ![](assets/icons/ancestral_seed.png){ .mc-inline } [Ancestral Seed](#ancestral-seed) | `titanutilities:ancestral_seed` | Crafted in the modpack |
+| ![](assets/icons/world_core.png){ .mc-inline } [World Core](#world-core) | `titanutilities:world_core` | Crafted in the modpack |
+| ![](assets/icons/raid_king.png){ .mc-inline } [Raid King](#raid-king) | `titanutilities:raid_king` | Max Bad Omen raid drop |
+| ![](assets/icons/antenna.png){ .mc-inline } [Antenna](#antenna) | `titanutilities:antenna` | Crafted in the modpack |
+| ![](assets/icons/calculator.png){ .mc-inline } [Calculator](#calculator) | `titanutilities:calculator` | Crafted in the modpack |
+| ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanutilities:iron_man_mask` | Crafted in the modpack |
+| ![](assets/icons/music_disc_titanium.png){ .mc-inline } [Titanium Music Disc](#music-disc-titanium) | `titanutilities:music_disc_titanium` | Titan Crafter |
+| ![](assets/icons/universal_remote.png){ .mc-inline } [Universal Remote](#universal-remote) | `titanutilities:universal_remote` | Titan Crafter (200M FE) |
 
 ## Source Crystal { #source-crystal }
 
-![](assets/icons/source_crystal.png){ .mc-inline } `titanores:source_crystal`
+![](assets/icons/source_crystal.png){ .mc-inline } `titanutilities:source_crystal`
 
 Made with a **Hephaestus Forge ritual** (Forbidden & Arcanus), forge **tier 3 or higher**:
 
@@ -44,7 +44,7 @@ The essence amounts are above the tier 2 limits, so the ritual needs a tier 3+ f
 
 ## Sponge Bob { #sponge-bob }
 
-![](assets/icons/sponge_bob.png){ .mc-inline } `titanores:sponge_bob`
+![](assets/icons/sponge_bob.png){ .mc-inline } `titanutilities:sponge_bob`
 
 Made with **Create Mechanical Crafters** in a **7x8 grid** (recipe added by the modpack with KubeJS):
 
@@ -62,19 +62,19 @@ Made with **Create Mechanical Crafters** in a **7x8 grid** (recipe added by the 
 
 ## Ancestral Seed { #ancestral-seed }
 
-![](assets/icons/ancestral_seed.png){ .mc-inline } `titanores:ancestral_seed`
+![](assets/icons/ancestral_seed.png){ .mc-inline } `titanutilities:ancestral_seed`
 
 Crafted in the modpack (KubeJS). Recipe coming soon.
 
 ## World Core { #world-core }
 
-![](assets/icons/world_core.png){ .mc-inline } `titanores:world_core`
+![](assets/icons/world_core.png){ .mc-inline } `titanutilities:world_core`
 
 Crafted in the modpack (KubeJS). Recipe coming soon.
 
 ## Raid King { #raid-king }
 
-![](assets/icons/raid_king.png){ .mc-inline } `titanores:raid_king`
+![](assets/icons/raid_king.png){ .mc-inline } `titanutilities:raid_king`
 
 **How to get:** dropped when the **last raider** of a raid started with the **highest Bad Omen level** (V in vanilla)
 dies and the raid is won. Every such raid drops one, so it can be farmed (a player has to stay nearby to keep the raid
@@ -85,25 +85,25 @@ the highest level if a mod raises the Bad Omen cap). It has no armor value.
 
 ## Antenna { #antenna }
 
-![](assets/icons/antenna.png){ .mc-inline } `titanores:antenna`
+![](assets/icons/antenna.png){ .mc-inline } `titanutilities:antenna`
 
 Crafted in the modpack (KubeJS). Recipe coming soon.
 
 ## Calculator { #calculator }
 
-![](assets/icons/calculator.png){ .mc-inline } `titanores:calculator`
+![](assets/icons/calculator.png){ .mc-inline } `titanutilities:calculator`
 
 Crafted in the modpack (KubeJS). Recipe coming soon.
 
 ## Iron Man Mask { #iron-man-mask }
 
-![](assets/icons/iron_man_mask.png){ .mc-inline } `titanores:iron_man_mask`
+![](assets/icons/iron_man_mask.png){ .mc-inline } `titanutilities:iron_man_mask`
 
 Crafted in the modpack (KubeJS). Recipe coming soon.
 
 ## Titanium Music Disc { #music-disc-titanium }
 
-![](assets/icons/music_disc_titanium.png){ .mc-inline } `titanores:music_disc_titanium`
+![](assets/icons/music_disc_titanium.png){ .mc-inline } `titanutilities:music_disc_titanium`
 
 Made in the [Titan Crafter](titan-crafter.md): **36 Titanium Ingots** around **any music disc** in the center,
 using **36,000,000 FE** over 60 seconds.
@@ -114,6 +114,36 @@ using **36,000,000 FE** over 60 seconds.
 
 ## Universal Remote { #universal-remote }
 
-![](assets/icons/universal_remote.png){ .mc-inline } `titanores:universal_remote`
+![](assets/icons/universal_remote.png){ .mc-inline } `titanutilities:universal_remote`
 
-Crafted in the modpack (KubeJS). Recipe coming soon.
+Made in the [Titan Crafter](titan-crafter.md) with **200,000,000 FE** (a full machine) over **5 minutes** (recipe
+added by the modpack with KubeJS). Every item must be in its exact slot:
+
+![Universal Remote recipe in the Titan Crafter](assets/recipes/universal_remote_titan_crafter.png)
+
+| Key | Item | Mod | Amount |
+|---|---|---|---|
+| F | Supreme Machine Frame | Industrial Foregoing | 12 |
+| E | Ultimate Energy Cube | Mekanism | 6 |
+| W | Wyvern Energy Controller | Draconic Evolution | 3 |
+| A | 64k ME Storage Component | Applied Energistics 2 | 2 |
+| P | 64k Storage Part | Refined Storage | 2 |
+| R | Energizing Rod (Nitro) | Powah | 2 |
+| G | Diamond Gear | any mod (`#forge:gears/diamond`) | 1 |
+| L | Logic Programmer | Integrated Dynamics | 1 |
+| M | ME Controller | Applied Energistics 2 | 1 |
+| O | Modular Router | Modular Routers | 1 |
+| C | Advanced Computer | CC: Tweaked | 1 |
+| B | Rainbow Furnace | Iron Furnaces | 1 |
+| S | Controller | Refined Storage | 1 |
+| X | Flux Controller | Flux Networks | 1 |
+
+```
+         
+ FFRGRFF 
+ FLAMPOF 
+ EEECEEE 
+ FBASPXF 
+ FFWWWFF 
+         
+```

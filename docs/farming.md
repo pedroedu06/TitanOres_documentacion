@@ -5,9 +5,9 @@ essence and turn it into nuggets.
 
 ## Blue Soil
 
-![](assets/icons/blue_soil.png){ .mc-inline } `titanores:blue_soil`
+![](assets/icons/blue_soil.png){ .mc-inline } `titanutilities:blue_soil`
 
-The only block the essence crops grow on (not farmland or grass). Its recipe is added by the modpack (KubeJS).
+Part of **Titan Utilities**. The only block the essence crops grow on (not farmland or grass): the crops accept any block in the `#titanores:essence_crop_soil` block tag, which Titan Utilities fills with Blue Soil. Its recipe is added by the modpack (KubeJS).
 Mine it with a shovel.
 
 ## Crops

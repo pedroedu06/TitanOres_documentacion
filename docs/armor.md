@@ -46,7 +46,7 @@ Armor upgrades use the **crafting table** (not the smithing table) and **keep en
 goes in the middle, surrounded by the new ingots. Only the Titanium Star upgrade uses the smithing table.
 
 === "Solarite"
-    <div class="recipes">
+    <div class="recipes recipes-2x2">
     --8<-- "recipes/solarite_helmet.html"
     --8<-- "recipes/solarite_chestplate.html"
     --8<-- "recipes/solarite_leggings.html"
@@ -54,7 +54,7 @@ goes in the middle, surrounded by the new ingots. Only the Titanium Star upgrade
     </div>
     
 === "Emberite"
-    <div class="recipes">
+    <div class="recipes recipes-2x2">
     --8<-- "recipes/emberite_helmet.html"
     --8<-- "recipes/emberite_chestplate.html"
     --8<-- "recipes/emberite_leggings.html"
@@ -62,7 +62,7 @@ goes in the middle, surrounded by the new ingots. Only the Titanium Star upgrade
     </div>
     
 === "Titanium"
-    <div class="recipes">
+    <div class="recipes recipes-2x2">
     --8<-- "recipes/titanium_helmet.html"
     --8<-- "recipes/titanium_chestplate.html"
     --8<-- "recipes/titanium_leggings.html"
@@ -70,7 +70,7 @@ goes in the middle, surrounded by the new ingots. Only the Titanium Star upgrade
     </div>
     
 === "Titanium Star"
-    <div class="recipes">
+    <div class="recipes recipes-2x2">
     --8<-- "recipes/titanium_star_helmet_smithing.html"
     --8<-- "recipes/titanium_star_chestplate_smithing.html"
     --8<-- "recipes/titanium_star_leggings_smithing.html"

@@ -1,11 +1,11 @@
-"""Sync data from the TitanOres mod into the docs.
+"""Sync data from the TitanOres and Titan Utilities mods into the docs.
 
 - Copies item/block icons (first frame of animated textures) to docs/assets/icons/<item_id>.png
 - Generates one HTML snippet per recipe in docs/snippets/recipes/<recipe_name>.html
 
 Usage (from the docs repo root):
-    python scripts/sync_from_mod.py [path/to/TitanOres]
-Default mod path: ../TitanOres
+    python scripts/sync_from_mod.py [path/to/TitanOres] [path/to/TitanUtilities]
+Default mod paths: ../TitanOres and ../TitanUtilities
 """
 import html
 import io
@@ -17,14 +17,36 @@ import zlib
 from pathlib import Path
 
 DOCS = Path(__file__).resolve().parent.parent
-MOD = Path(sys.argv[1]) if len(sys.argv) > 1 else DOCS.parent / "TitanOres"
-RES = MOD / "src" / "main" / "resources"
-ASSETS = RES / "assets" / "titanores"
-RECIPES = RES / "data" / "titanores" / "recipes"
+# namespace -> mod project folder
+MODS = {
+    "titanores": Path(sys.argv[1]) if len(sys.argv) > 1 else DOCS.parent / "TitanOres",
+    "titanutilities": Path(sys.argv[2]) if len(sys.argv) > 2 else DOCS.parent / "TitanUtilities",
+}
 ICONS_OUT = DOCS / "docs" / "assets" / "icons"
 SNIPPETS_OUT = DOCS / "docs" / "snippets" / "recipes"
 
-LANG = json.loads((ASSETS / "lang" / "en_us.json").read_text(encoding="utf-8"))
+
+def assets(ns):
+    return MODS[ns] / "src" / "main" / "resources" / "assets" / ns
+
+
+def recipes_dir(ns):
+    return MODS[ns] / "src" / "main" / "resources" / "data" / ns / "recipes"
+
+
+def read_json(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def texture_file(texture):
+    """'<ns>:item/x' -> the PNG inside that mod."""
+    ns, path = texture.split(":", 1)
+    return assets(ns) / "textures" / (path + ".png")
+
+
+LANG = {}
+for _ns in MODS:
+    LANG.update(read_json(assets(_ns) / "lang" / "en_us.json"))
 
 
 # ---------- PNG helpers (no external dependencies) ----------
@@ -83,15 +105,22 @@ def write_png(path, width, rows):
 
 # ---------- icons ----------
 
-def texture_for_item(item_id):
+def block_model(parent):
+    """'<ns>:block/x' of one of our mods -> that block model, else None."""
+    ns, _, path = parent.partition(":")
+    if ns not in MODS or not path.startswith("block/"):
+        return None
+    return read_json(assets(ns) / "models" / (path + ".json"))
+
+
+def texture_for_item(ns, item_id):
     """Resolve the texture an item shows in the inventory."""
-    model = json.loads((ASSETS / "models" / "item" / f"{item_id}.json").read_text(encoding="utf-8"))
+    model = read_json(assets(ns) / "models" / "item" / f"{item_id}.json")
     textures = model.get("textures", {})
     if "layer0" in textures:
         return textures["layer0"]
-    parent = model.get("parent", "")
-    if parent.startswith("titanores:block/"):
-        block = json.loads((ASSETS / "models" / "block" / (parent.split("/", 1)[1] + ".json")).read_text(encoding="utf-8"))
+    block = block_model(model.get("parent", ""))
+    if block:
         bt = block.get("textures", {})
         for key in ("all", "north", "front", "side", "particle"):
             if key in bt:
@@ -99,13 +128,12 @@ def texture_for_item(item_id):
     return None
 
 
-def block_faces(item_id):
+def block_faces(ns, item_id):
     """Top/left/right textures for cube block items, or None for non-cube models."""
-    model = json.loads((ASSETS / "models" / "item" / f"{item_id}.json").read_text(encoding="utf-8"))
-    parent = model.get("parent", "")
-    if not parent.startswith("titanores:block/"):
+    model = read_json(assets(ns) / "models" / "item" / f"{item_id}.json")
+    block = block_model(model.get("parent", ""))
+    if not block:
         return None
-    block = json.loads((ASSETS / "models" / "block" / (parent.split("/", 1)[1] + ".json")).read_text(encoding="utf-8"))
     t = block.get("textures", {})
     if block.get("parent") == "minecraft:block/cube_all" and "all" in t:
         return t["all"], t["all"], t["all"]
@@ -118,7 +146,7 @@ def block_faces(item_id):
 
 def load_frame(texture):
     """First frame of a texture as rows of RGBA pixels, or None if it cannot be read."""
-    png = read_png(ASSETS / "textures" / (texture.split(":", 1)[1] + ".png"))
+    png = read_png(texture_file(texture))
     if not png:
         return None
     width, _, rows = png
@@ -157,38 +185,42 @@ def render_iso(top, left, right, size=64):
 def copy_icons():
     ICONS_OUT.mkdir(parents=True, exist_ok=True)
     count = 0
-    for model_file in sorted((ASSETS / "models" / "item").glob("*.json")):
-        item_id = model_file.stem
-        texture = texture_for_item(item_id)
-        if not texture:
-            continue
-        src = ASSETS / "textures" / (texture.split(":", 1)[1] + ".png")
-        if not src.exists():
-            print(f"  missing texture for {item_id}: {src}")
-            continue
-        dst = ICONS_OUT / f"{item_id}.png"
-        faces = block_faces(item_id)
-        frames = [load_frame(t) for t in faces] if faces else None
-        if frames and all(frames):
-            write_png(dst, 64, render_iso(*frames))
-            count += 1
-            continue
-        png = read_png(src)
-        if png and png[1] > png[0]:  # animated strip: keep the first frame
-            width, _, rows = png
-            write_png(dst, width, rows[:width])
-        else:
-            dst.write_bytes(src.read_bytes())
-        count += 1
+    for ns in MODS:
+        for model_file in sorted((assets(ns) / "models" / "item").glob("*.json")):
+            count += copy_icon(ns, model_file.stem)
     print(f"icons: {count}")
+
+
+def copy_icon(ns, item_id):
+    """Writes docs/assets/icons/<item_id>.png; returns 1 if an icon was written."""
+    texture = texture_for_item(ns, item_id)
+    if not texture:
+        return 0
+    src = texture_file(texture)
+    if not src.exists():
+        print(f"  missing texture for {ns}:{item_id}: {src}")
+        return 0
+    dst = ICONS_OUT / f"{item_id}.png"
+    faces = block_faces(ns, item_id)
+    frames = [load_frame(t) for t in faces] if faces else None
+    if frames and all(frames):
+        write_png(dst, 64, render_iso(*frames))
+        return 1
+    png = read_png(src)
+    if png and png[1] > png[0]:  # animated strip: keep the first frame
+        width, _, rows = png
+        write_png(dst, width, rows[:width])
+    else:
+        dst.write_bytes(src.read_bytes())
+    return 1
 
 
 # ---------- recipes ----------
 
 def item_name(item_id):
     ns, path = item_id.split(":", 1)
-    if ns == "titanores":
-        return LANG.get(f"item.titanores.{path}") or LANG.get(f"block.titanores.{path}") or path
+    if ns in MODS:
+        return LANG.get(f"item.{ns}.{path}") or LANG.get(f"block.{ns}.{path}") or path
     return path.replace("_", " ").title()
 
 
@@ -200,7 +232,8 @@ POTION_NAMES = {
 TAG_NAMES = {
     "forge:gears/iron": "Iron Gear",
     "forge:glass/colorless": "Glass",
-    "titanores:machine_blocks": "Machine Block",
+    "titanutilities:machine_blocks": "Machine Block",
+    "forge:storage_blocks/enderium": "Enderium Block",
     "minecraft:music_discs": "Music Disc",
 }
 
@@ -227,7 +260,7 @@ def slot(ingredient, count=1):
     name = html.escape(name)
     ns, path = item_id.split(":", 1)
     badge = f'<span class="mc-count">{count}</span>' if count > 1 else ""
-    if ns == "titanores" and (ICONS_OUT / f"{path}.png").exists():
+    if ns in MODS and (ICONS_OUT / f"{path}.png").exists():
         inner = f'<img src="../assets/icons/{path}.png" alt="{name}">'
     else:
         # Vanilla/other mods: no textures are copied, show a short label instead.
@@ -266,7 +299,7 @@ def render(recipe):
         station = "Furnace" if kind == "minecraft:smelting" else "Blast Furnace"
         seconds = recipe.get("cookingtime", 200) / 20
         return line([slot(recipe["ingredient"])], result, f"{station} · {seconds:g}s · {recipe.get('experience', 0)} XP")
-    if kind == "titanores:titan_factory":
+    if kind == "titanutilities:titan_factory":
         left = (recipe.get("left") or []) + [None] * 3
         right = (recipe.get("right") or []) + [None] * 3
         cells = []
@@ -277,7 +310,7 @@ def render(recipe):
         if recipe.get("mirrored"):
             label += " · columns can be swapped"
         return grid(cells, result, label)
-    if kind == "titanores:titan_crafting":
+    if kind == "titanutilities:titan_crafting":
         cells = [slot(recipe["key"].get(ch)) if ch != " " else slot(None)
                  for row in recipe["pattern"] for ch in row]
         seconds = recipe.get("time", 200) / 20
@@ -301,14 +334,16 @@ def line(parts, result, label):
 def generate_recipes():
     SNIPPETS_OUT.mkdir(parents=True, exist_ok=True)
     count = 0
-    for recipe_file in sorted(RECIPES.glob("*.json")):
-        recipe = json.loads(recipe_file.read_text(encoding="utf-8"))
-        (SNIPPETS_OUT / f"{recipe_file.stem}.html").write_text(render(recipe), encoding="utf-8")
-        count += 1
+    for ns in MODS:
+        for recipe_file in sorted(recipes_dir(ns).glob("*.json")):
+            recipe = read_json(recipe_file)
+            (SNIPPETS_OUT / f"{recipe_file.stem}.html").write_text(render(recipe), encoding="utf-8")
+            count += 1
     print(f"recipes: {count}")
 
 
 if __name__ == "__main__":
-    print(f"mod: {MOD}")
+    for ns, path in MODS.items():
+        print(f"{ns}: {path}")
     copy_icons()
     generate_recipes()

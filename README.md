@@ -1,6 +1,6 @@
 # TitanOres Docs
 
-Documentation site for **TitanOres**, the endgame ore progression mod of the Titan Modpack
+Documentation site for **TitanOres**, the endgame ore progression mod of the TitanMods modpack
 (Minecraft 1.16.5 / Forge 36.2.42). Built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 and published with GitHub Pages.
 

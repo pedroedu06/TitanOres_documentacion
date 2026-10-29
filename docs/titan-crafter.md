@@ -1,8 +1,10 @@
 # Titan Crafter
 
-![](assets/icons/titan_crafter.png){ .mc-inline } `titanores:titan_crafter`
+![](assets/icons/titan_crafter.png){ .mc-inline } `titanutilities:titan_crafter`
 
-An energy-powered **9×7 crafting grid** for the mod's final crafts. Recipes are shaped with **fixed positions**: every
+Part of **Titan Utilities**, the TitanMods companion mod (requires TitanOres).
+
+An energy-powered **9×7 crafting grid** for the final crafts. Recipes are shaped with **fixed positions**: every
 item has to be in its exact slot.
 
 !!! warning "Work in progress"
@@ -52,7 +54,7 @@ The iron gears are temporary: the plan is to use diamond gears once the modpack 
 
 ```json
 {
-  "type": "titanores:titan_crafting",
+  "type": "titanutilities:titan_crafting",
   "pattern": [
     "         ",
     "         ",
