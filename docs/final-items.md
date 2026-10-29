@@ -16,7 +16,7 @@ the [Titan Crafter](titan-crafter.md).
 | ![](assets/icons/raid_king.png){ .mc-inline } [Raid King](#raid-king) | `titanutilities:raid_king` | Max Bad Omen raid drop |
 | ![](assets/icons/antenna.png){ .mc-inline } [Antenna](#antenna) | `titanutilities:antenna` | Crafted in the modpack |
 | ![](assets/icons/calculator.png){ .mc-inline } [Calculator](#calculator) | `titanutilities:calculator` | Crafted in the modpack |
-| ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanutilities:iron_man_mask` | Crafted in the modpack |
+| ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanutilities:iron_man_mask` | Pressure Chamber (5.0 bar) |
 | ![](assets/icons/music_disc_titanium.png){ .mc-inline } [Titanium Music Disc](#music-disc-titanium) | `titanutilities:music_disc_titanium` | Titan Crafter |
 | ![](assets/icons/universal_remote.png){ .mc-inline } [Universal Remote](#universal-remote) | `titanutilities:universal_remote` | Titan Crafter (200M FE) |
 
@@ -99,7 +99,16 @@ Crafted in the modpack (KubeJS). Recipe coming soon.
 
 ![](assets/icons/iron_man_mask.png){ .mc-inline } `titanutilities:iron_man_mask`
 
-Crafted in the modpack (KubeJS). Recipe coming soon.
+Made in the **PneumaticCraft Pressure Chamber** at **5.0 bar** (recipe added by the modpack with KubeJS). Drop all the
+items into the pressurized chamber; their order does not matter.
+
+| Item | Mod | Amount |
+|---|---|---|
+| Red Wool | Minecraft | 3 |
+| Block of Gold | Minecraft | 2 |
+| Solar Panel VII | Solar Flux Reborn | 2 |
+| Ultimate Energy Cube | Mekanism | 1 |
+| MekaSuit Helmet | Mekanism | 1 |
 
 ## Titanium Music Disc { #music-disc-titanium }
 
