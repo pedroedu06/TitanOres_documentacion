@@ -12,10 +12,10 @@ the [Titan Crafter](titan-crafter.md).
 | ![](assets/icons/source_crystal.png){ .mc-inline } [Source Crystal](#source-crystal) | `titanutilities:source_crystal` | Hephaestus Forge ritual (Forbidden & Arcanus) |
 | ![](assets/icons/sponge_bob.png){ .mc-inline } [Sponge Bob](#sponge-bob) | `titanutilities:sponge_bob` | Create Mechanical Crafters |
 | ![](assets/icons/ancestral_seed.png){ .mc-inline } [Ancestral Seed](#ancestral-seed) | `titanutilities:ancestral_seed` | Infusion Altar (Mystical Agriculture) |
-| ![](assets/icons/world_core.png){ .mc-inline } [World Core](#world-core) | `titanutilities:world_core` | Crafted in the modpack |
+| ![](assets/icons/world_core.png){ .mc-inline } [World Core](#world-core) | `titanutilities:world_core` | Crafting Table |
 | ![](assets/icons/raid_king.png){ .mc-inline } [Raid King](#raid-king) | `titanutilities:raid_king` | Max Bad Omen raid drop |
-| ![](assets/icons/antenna.png){ .mc-inline } [Antenna](#antenna) | `titanutilities:antenna` | Crafted in the modpack |
-| ![](assets/icons/calculator.png){ .mc-inline } [Calculator](#calculator) | `titanutilities:calculator` | Crafted in the modpack |
+| ![](assets/icons/antenna.png){ .mc-inline } [Antenna](#antenna) | `titanutilities:antenna` | Crafting Table |
+| ![](assets/icons/calculator.png){ .mc-inline } [Calculator](#calculator) | `titanutilities:calculator` | Crafting Table |
 | ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanutilities:iron_man_mask` | Pressure Chamber (5.0 bar) |
 | ![](assets/icons/music_disc_titanium.png){ .mc-inline } [Titanium Music Disc](#music-disc-titanium) | `titanutilities:music_disc_titanium` | Titan Crafter |
 | ![](assets/icons/universal_remote.png){ .mc-inline } [Universal Remote](#universal-remote) | `titanutilities:universal_remote` | Titan Crafter (200M FE) |
@@ -79,7 +79,12 @@ Made on the Mystical Agriculture **Infusion Altar** (recipe added by the modpack
 
 ![](assets/icons/world_core.png){ .mc-inline } `titanutilities:world_core`
 
-Crafted in the modpack (KubeJS). Recipe coming soon.
+Crafted from one piece of each dimension: Overworld on top, Nether in the middle and End at the bottom. The water
+bucket gives the empty bucket back.
+
+<div class="recipes">
+--8<-- "recipes/world_core.html"
+</div>
 
 ## Raid King { #raid-king }
 
@@ -98,13 +103,25 @@ In game, open the crown in **JEI** (R or U): an **Information** page explains ho
 
 ![](assets/icons/antenna.png){ .mc-inline } `titanutilities:antenna`
 
-Crafted in the modpack (KubeJS). Recipe coming soon.
+Crafted on a crafting table (recipe added by the modpack with KubeJS). Every item must be in its exact slot:
+
+| | Left | Center | Right |
+|---|---|---|---|
+| **Top** | Dimension Card (AE Infinity Booster) | Antenna (XNet) | Moonstone (Blue Skies) |
+| **Middle** | Energy Cell (Nitro) (Powah) | Linked Controller (Create) | Any Drone (PneumaticCraft) |
+| **Bottom** | ME Quantum Ring (AE2) | Wireless Crafting Grid (RS Addons) | Fiery Ingot (Twilight Forest) |
 
 ## Calculator { #calculator }
 
 ![](assets/icons/calculator.png){ .mc-inline } `titanutilities:calculator`
 
-Crafted in the modpack (KubeJS). Recipe coming soon.
+Crafted on a crafting table (recipe added by the modpack with KubeJS). Every item must be in its exact slot:
+
+| | Left | Center | Right |
+|---|---|---|---|
+| **Top** | | ME Wireless Access Point | |
+| **Middle** | Compact Machine (Large) | Advanced Computer | Wireless Terminal |
+| **Bottom** | ![](assets/icons/solarite_magnet.png){ .mc-inline } Solarite Magnet | Memory Card | |
 
 ## Iron Man Mask { #iron-man-mask }
 
