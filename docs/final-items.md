@@ -84,10 +84,6 @@ bucket gives the empty bucket back.
 
 ![World Core recipe](assets/recipes/world_core_crafting.png)
 
-<div class="recipes">
---8<-- "recipes/world_core.html"
-</div>
-
 ## Raid King { #raid-king }
 
 ![](assets/icons/raid_king.png){ .mc-inline } `titanutilities:raid_king`
