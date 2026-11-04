@@ -82,6 +82,8 @@ Made on the Mystical Agriculture **Infusion Altar** (recipe added by the modpack
 Crafted from one piece of each dimension: Overworld on top, Nether in the middle and End at the bottom. The water
 bucket gives the empty bucket back.
 
+![World Core recipe](assets/recipes/world_core_crafting.png)
+
 <div class="recipes">
 --8<-- "recipes/world_core.html"
 </div>
@@ -105,6 +107,8 @@ In game, open the crown in **JEI** (R or U): an **Information** page explains ho
 
 Crafted on a crafting table (recipe added by the modpack with KubeJS). Every item must be in its exact slot:
 
+![Antenna recipe](assets/recipes/antenna_crafting.png)
+
 | | Left | Center | Right |
 |---|---|---|---|
 | **Top** | Dimension Card (AE Infinity Booster) | Antenna (XNet) | Moonstone (Blue Skies) |
@@ -116,6 +120,8 @@ Crafted on a crafting table (recipe added by the modpack with KubeJS). Every ite
 ![](assets/icons/calculator.png){ .mc-inline } `titanutilities:calculator`
 
 Crafted on a crafting table (recipe added by the modpack with KubeJS). Every item must be in its exact slot:
+
+![Calculator recipe](assets/recipes/calculator_crafting.png)
 
 | | Left | Center | Right |
 |---|---|---|---|
@@ -160,29 +166,19 @@ added by the modpack with KubeJS). Every item must be in its exact slot:
 
 ![Universal Remote recipe in the Titan Crafter](assets/recipes/universal_remote_titan_crafter.png)
 
-| Key | Item | Mod | Amount |
-|---|---|---|---|
-| F | Supreme Machine Frame | Industrial Foregoing | 12 |
-| E | Ultimate Energy Cube | Mekanism | 6 |
-| W | Wyvern Energy Controller | Draconic Evolution | 3 |
-| A | 64k ME Storage Component | Applied Energistics 2 | 2 |
-| P | 64k Storage Part | Refined Storage | 2 |
-| R | Energizing Rod (Nitro) | Powah | 2 |
-| G | Diamond Gear | any mod (`#forge:gears/diamond`) | 1 |
-| L | Logic Programmer | Integrated Dynamics | 1 |
-| M | ME Controller | Applied Energistics 2 | 1 |
-| O | Modular Router | Modular Routers | 1 |
-| C | Advanced Computer | CC: Tweaked | 1 |
-| B | Rainbow Furnace | Iron Furnaces | 1 |
-| S | Controller | Refined Storage | 1 |
-| X | Flux Controller | Flux Networks | 1 |
-
-```
-         
- FFRGRFF 
- FLAMPOF 
- EEECEEE 
- FBASPXF 
- FFWWWFF 
-         
-```
+| Item | Mod | Amount |
+|---|---|---|
+| Supreme Machine Frame | Industrial Foregoing | 12 |
+| Ultimate Energy Cube | Mekanism | 6 |
+| Wyvern Energy Controller | Draconic Evolution | 3 |
+| 64k ME Storage Component | Applied Energistics 2 | 2 |
+| 64k Storage Part | Refined Storage | 2 |
+| Energizing Rod (Nitro) | Powah | 2 |
+| Diamond Gear | any mod (`#forge:gears/diamond`) | 1 |
+| Logic Programmer | Integrated Dynamics | 1 |
+| ME Controller | Applied Energistics 2 | 1 |
+| Modular Router | Modular Routers | 1 |
+| Advanced Computer | CC: Tweaked | 1 |
+| Rainbow Furnace | Iron Furnaces | 1 |
+| Controller | Refined Storage | 1 |
+| Flux Controller | Flux Networks | 1 |
