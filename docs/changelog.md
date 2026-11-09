@@ -1,5 +1,10 @@
 # Changelog
 
+## Titan Utilities (unreleased)
+
+- New final item **[Titan Star](titan-star.md)** (`titanutilities:titan_star`): enchanted look and an
+  animated rainbow name. Recipe coming soon.
+
 ## 1.0.5
 
 - The **final items** (Source Crystal, Sponge Bob, Ancestral Seed, World Core, Raid King, Antenna, Calculator, Iron Man

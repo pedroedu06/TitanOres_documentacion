@@ -1,6 +1,6 @@
 # Final Items
 
-The endgame components of the TitanMods modpack (10 in total). They are part of **Titan Utilities**, the TitanMods companion mod (requires TitanOres). They are the ingredients of the final crafts in
+The endgame components of the TitanMods modpack (11 in total). They are part of **Titan Utilities**, the TitanMods companion mod (requires TitanOres). They are the ingredients of the final crafts in
 the [Titan Crafter](titan-crafter.md).
 
 !!! info "Recipes"
@@ -19,6 +19,7 @@ the [Titan Crafter](titan-crafter.md).
 | ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanutilities:iron_man_mask` | Pressure Chamber (5.0 bar) |
 | ![](assets/icons/music_disc_titanium.png){ .mc-inline } [Titanium Music Disc](#music-disc-titanium) | `titanutilities:music_disc_titanium` | Titan Crafter |
 | ![](assets/icons/universal_remote.png){ .mc-inline } [Universal Remote](#universal-remote) | `titanutilities:universal_remote` | Titan Crafter (200M FE) |
+| ![](assets/icons/titan_star.png){ .mc-inline } [Titan Star](titan-star.md) | `titanutilities:titan_star` | Recipe coming soon |
 
 ## Source Crystal { #source-crystal }
 

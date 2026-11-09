@@ -170,3 +170,152 @@ img.mc-inline {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
+
+/* Titan Star page */
+.ts-cover {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 0 1.5rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.ts-cover p {
+  margin: 0;
+}
+
+.ts-cover-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.ts-cover-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem 1.5rem 1.25rem;
+  text-align: center;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.md-typeset .ts-cover-text h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.md-typeset .ts-cover-text .headerlink {
+  display: none;
+}
+
+.md-typeset .ts-tagline {
+  margin: 0.35rem 0 0;
+  color: #fff;
+  font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+  font-style: italic;
+  text-shadow: 0 2px 6px #000;
+}
+
+.ts-rainbow {
+  background: linear-gradient(90deg, #ff4d4d, #ffa64d, #ffff4d, #4dff88, #4dd2ff, #7a4dff, #ff4df0, #ff4d4d);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: ts-rainbow 4s linear infinite;
+}
+
+@keyframes ts-rainbow {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.ts-showcase {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ts-showcase > p {
+  flex: 1 1 260px;
+  margin: 0;
+}
+
+.ts-showcase > p:first-child {
+  flex: 0 0 auto;
+}
+
+.ts-icon {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  animation: ts-float 3s ease-in-out infinite, ts-glow 3s ease-in-out infinite;
+}
+
+@keyframes ts-float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes ts-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px #ff3df5);
+  }
+  50% {
+    filter: drop-shadow(0 0 14px #3d8bff);
+  }
+}
+
+.ts-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .ts-card {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  background: var(--md-code-bg-color);
+}
+
+.md-typeset .ts-card p {
+  margin: 0;
+}
+
+.md-typeset .ts-card strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .ts-card code {
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .ts-cover-text {
+    position: static;
+    padding: 1rem;
+    background: #111;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-rainbow,
+  .ts-icon {
+    animation: none;
+  }
+}
