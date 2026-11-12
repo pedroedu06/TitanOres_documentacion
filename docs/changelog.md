@@ -3,7 +3,9 @@
 ## Titan Utilities (unreleased)
 
 - New final item **[Titan Star](titan-star.md)** (`titanutilities:titan_star`): enchanted look and an
-  animated rainbow name. Recipe coming soon.
+  animated rainbow name. Made with a 9x9 cross of Create Mechanical Crafters using all 10
+  final items.
+- Titan Crafter recipe: the iron gears were replaced by **diamond gears** (`#forge:gears/diamond`).
 
 ## 1.0.5
 

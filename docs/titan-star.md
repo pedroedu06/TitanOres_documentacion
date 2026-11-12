@@ -34,7 +34,7 @@ Epic, always enchanted
 </div>
 <div class="ts-card" markdown>
 **How to get**
-Recipe coming soon
+Create Mechanical Crafters (9x9)
 </div>
 </div>
 
@@ -42,11 +42,29 @@ Recipe coming soon
 
 Every other final item asks you to master a different part of the modpack: rituals, automation, magic, raids and
 huge amounts of energy. The Titan Star is meant to be the crown of that journey. Master the ores, the machines and the
-final items of TitanMods, and get ready: when its recipe is revealed, only the strongest players will be able to make
-one.
+final items of TitanMods: only a player who has made every one of them can build the [crafter](#recipe) that forges
+the star.
 
 ## Recipe { #recipe }
 
-!!! info "Coming soon"
-    The Titan Star recipe has not been revealed yet. It will be shown here, with its JEI screenshot, as soon as it is
-    added.
+Made with a **9x9 cross of Create Mechanical Crafters** (recipe added by
+the modpack with KubeJS). It takes **all 10 final items** at once, surrounded by Titanium Stars, Emberium Blocks and
+Compressed Nether Star Blocks (1x). Every item must be in its exact crafter.
+
+![The 9x9 cross of Mechanical Crafters loaded with the Titan Star recipe](assets/screenshots/titan_star_crafters.png){ .ts-shot }
+
+| Item | Mod | Amount |
+|---|---|---|
+| Compressed Nether Star Block (1x) | AllTheCompressed | 12 |
+| ![](assets/icons/emberium_block.png){ .mc-inline } Emberium Block | TitanOres | 12 |
+| ![](assets/icons/titanium_star.png){ .mc-inline } Titanium Star | TitanOres | 3 |
+| ![](assets/icons/universal_remote.png){ .mc-inline } Universal Remote | Titan Utilities | 1 |
+| ![](assets/icons/iron_man_mask.png){ .mc-inline } Iron Man Mask | Titan Utilities | 1 |
+| ![](assets/icons/world_core.png){ .mc-inline } World Core | Titan Utilities | 1 |
+| ![](assets/icons/sponge_bob.png){ .mc-inline } Sponge Bob | Titan Utilities | 1 |
+| ![](assets/icons/antenna.png){ .mc-inline } Antenna | Titan Utilities | 1 |
+| ![](assets/icons/calculator.png){ .mc-inline } Calculator | Titan Utilities | 1 |
+| ![](assets/icons/ancestral_seed.png){ .mc-inline } Ancestral Seed | Titan Utilities | 1 |
+| ![](assets/icons/source_crystal.png){ .mc-inline } Source Crystal | Titan Utilities | 1 |
+| ![](assets/icons/raid_king.png){ .mc-inline } Raid King | Titan Utilities | 1 |
+| ![](assets/icons/music_disc_titanium.png){ .mc-inline } Titanium Music Disc | Titan Utilities | 1 |

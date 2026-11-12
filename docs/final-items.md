@@ -19,7 +19,7 @@ the [Titan Crafter](titan-crafter.md).
 | ![](assets/icons/iron_man_mask.png){ .mc-inline } [Iron Man Mask](#iron-man-mask) | `titanutilities:iron_man_mask` | Pressure Chamber (5.0 bar) |
 | ![](assets/icons/music_disc_titanium.png){ .mc-inline } [Titanium Music Disc](#music-disc-titanium) | `titanutilities:music_disc_titanium` | Titan Crafter |
 | ![](assets/icons/universal_remote.png){ .mc-inline } [Universal Remote](#universal-remote) | `titanutilities:universal_remote` | Titan Crafter (200M FE) |
-| ![](assets/icons/titan_star.png){ .mc-inline } [Titan Star](titan-star.md) | `titanutilities:titan_star` | Recipe coming soon |
+| ![](assets/icons/titan_star.png){ .mc-inline } [Titan Star](titan-star.md) | `titanutilities:titan_star` | Create Mechanical Crafters (9x9) |
 
 ## Source Crystal { #source-crystal }
 

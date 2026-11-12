@@ -18,8 +18,6 @@ Made in the [Titan Factory](titan-factory.md):
 --8<-- "recipes/titan_crafter_from_titan_factory.html"
 </div>
 
-The iron gears are temporary: the plan is to use diamond gears once the modpack has them.
-
 ## How it works
 
 - Place the items in the grid exactly as the recipe shows (JEI page or **+** button).
